@@ -1,4 +1,22 @@
+using ContactsManager.API.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+#region Add Db context
+builder.Services.AddDbContext<ContactsContext>
+    (
+        options =>
+        {
+            options.UseSqlServer
+                (
+                    builder.Configuration.GetConnectionString("DefaultConnection")
+                );
+
+        }
+    );
+#endregion
+
 
 // Add services to the container.
 
