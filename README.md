@@ -4,7 +4,8 @@
 
 ## REQUIRED: 
 ### A database named "Contacts" in SQL server 2014 with one table "Contact"
-`CREATE TABLE [dbo].[Contact] (
+`
+CREATE TABLE [dbo].[Contact] (
     [Id]       INT            IDENTITY (1, 1) NOT NULL,
     [Name]     NVARCHAR (50)  NOT NULL,
     [Email]    NVARCHAR (150) NULL,
