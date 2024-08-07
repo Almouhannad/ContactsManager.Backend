@@ -36,6 +36,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Resolve CORS
+app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
+// Update when production
+
 app.UseAuthorization();
 
 app.MapControllers();
